@@ -1,0 +1,8 @@
+{
+    "project_name": "getComic",
+    "project_description": "get code.",
+    "show_files": [
+    "main.php",
+    "app.yaml"
+    ],
+}
