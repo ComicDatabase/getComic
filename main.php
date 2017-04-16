@@ -1,6 +1,7 @@
 <?php
     $default_bucket = CloudStorageTools::getDefaultGoogleStorageBucketName();
     $file = "gs://${default_bucket}/cm.txt";
+    echo $file;
     if (!file_exists($file))
     {
         $myfile = fopen($file, "w") or die("error1!");
