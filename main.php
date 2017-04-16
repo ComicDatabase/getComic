@@ -1,6 +1,6 @@
 <?php
-    $default_bucket = "txcomic-164810.appspot.com";
-    $file = "gs://${default_bucket}/cm.txt";
+    //$default_bucket = "txcomic-164810.appspot.com";
+    $file = "gs://#default#/cm.txt";
     echo $file;
     if (!file_exists($file))
     {
