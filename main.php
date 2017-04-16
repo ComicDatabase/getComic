@@ -1,5 +1,5 @@
 <?php
-    $default_bucket = CloudStorageTools::getDefaultGoogleStorageBucketName();
+    $default_bucket = "txcomic-164810.appspot.com";
     $file = "gs://${default_bucket}/cm.txt";
     echo $file;
     if (!file_exists($file))
