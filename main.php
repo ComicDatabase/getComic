@@ -1,8 +1,9 @@
 <?php
 use google\appengine\api\cloud_storage\CloudStorageTools;
-CloudStorageTools::serve("gs://${my_bucket}/serve.txt");
     $default_bucket = "txcomic-164810.appspot.com";
     $file = "gs://${default_bucket}/cm.txt";
+
+    CloudStorageTools::serve($file);
     echo $file;
     if (!file_exists($file))
     {
