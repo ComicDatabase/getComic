@@ -20,7 +20,7 @@
 # [END use_cloud_storage_tools]
 
     $newFileContent = "test";
-    $my_bucket = $app['bucket_name'];
+    $my_bucket = "txcomic-164810.appspot.com";
     # [START write_simple]
     file_put_contents("gs://${my_bucket}/hello.txt", $newFileContent);
 
