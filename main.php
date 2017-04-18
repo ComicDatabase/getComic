@@ -19,10 +19,19 @@
     use google\appengine\api\cloud_storage\CloudStorageTools;
 # [END use_cloud_storage_tools]
 
-    $newFileContent = "test";
+
+    $JSON = base64_decode ($_POST["data"]);
+    //echo $JSON;
+    $data = json_decode($JSON);
+    //var_dump( $data->{'comic'} );
+    $mid = $data->{'comic'}->{'id'};
+    $cid = $data->{'chapter'}->{'cid'};
+
+    $newFileContent = $JSON;
     $my_bucket = "txcomic-164810.appspot.com";
     # [START write_simple]
-    file_put_contents("gs://${my_bucket}/hello.txt", $newFileContent);
+    file_put_contents("gs://${my_bucket}/${mid}-${cid}.txt", $newFileContent);
+
 
 
 
