@@ -20,12 +20,13 @@
 # [END use_cloud_storage_tools]
 
 
-    $JSON = base64_decode ($_POST["data"]);
+    $JSON = base64_decode ($_POST["comic"]);
     //echo $JSON;
     $data = json_decode($JSON);
     //var_dump( $data->{'comic'} );
     $mid = $data->{'comic'}->{'id'};
     $cid = $data->{'chapter'}->{'cid'};
+    echo $mid,$cid;
 
     $newFileContent = $JSON;
     $my_bucket = "txcomic-164810.appspot.com";
